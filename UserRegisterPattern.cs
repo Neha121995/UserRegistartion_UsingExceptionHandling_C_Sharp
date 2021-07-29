@@ -7,14 +7,14 @@ namespace UserRegistration_ExceptionHandling
 {
     public class UserRegisterPattern
     {
-        public static String Regex_mobileNumber = "(0|91)?[ ][6-9][0-9]{9}";
-        public bool validateMobileNumber(string mobileNo)
+        public static String Regex_Password = "^[A-Za-z]{8,}";
+        public bool validatePassword(string Pass)
         {
-            if (mobileNo == null)
+            if (Pass == null)
             {
-                throw new UserRegistrationClass(UserRegistrationClass.ExceptionsType.Invalid_MESSAGE, "Entered Invalid Mobile Number");
+                throw new UserRegistrationClass(UserRegistrationClass.ExceptionsType.Invalid_MESSAGE, "Entered Invalid Password");
             }
-            return Regex.IsMatch(mobileNo, Regex_mobileNumber);
+            return Regex.IsMatch(Pass, Regex_Password);
         }
 
     }

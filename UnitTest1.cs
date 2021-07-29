@@ -8,16 +8,16 @@ namespace User_TestCase
         readonly Pattern pattern = new Pattern();
 
         [TestMethod]
-        public void ShouldReturnCustomUserExceptionForMobileNumber()
+        public void ShouldReturnCustomUserExceptionForPassword()
         {
             try
             {
                 bool expected = true;
-                Assert.AreEqual(expected, pattern.validateMobileNumber(null));
+                Assert.AreEqual(expected, pattern.validatePassword(null));
             }
             catch (RegisterUser e)
             {
-                Assert.AreEqual("Invalid Mobile Number", e.Message);
+                Assert.AreEqual("Invalid Password", e.Message);
             }
         }
     }
