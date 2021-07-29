@@ -7,7 +7,7 @@ namespace UserRegistration_ExceptionHandling
 {
     public class UserRegisterPattern
     {
-        public static String Regex_Password = "^((?=.*[A-Z])(?=.*[0-9])(?=.{8,}))";
+        public static String Regex_Password = "^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!*@#$%^&+=]).*$";
         public bool validatePassword(string Pass)
         {
             if (Pass == null)
