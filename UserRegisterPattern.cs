@@ -7,19 +7,15 @@ namespace UserRegistration_ExceptionHandling
 {
     public class UserRegisterPattern
     {
-        public static String Regex_LName = "^[A-Z]{1}[A-Za-z]{2,}$";
-        public bool validateLastName(string LName)
+        public static String Regex_email = "^[A-Z0-9a-z]{1,}([.#$^][A-Za-z0-9]+)*[@][A-Za-z]{2,}[.][A-Za-z]{2,3}([.][a-zA-Z]{2})?$";
+        public bool validateEmail(string email)
         {
-            if (LName == null)
+            if (email == null)
             {
-                throw new UserRegistrationClass(UserRegistrationClass.ExceptionsType.Invalid_MESSAGE, "Entered Invalid Last Name");
+                throw new UserRegistrationClass(UserRegistrationClass.ExceptionsType.Invalid_MESSAGE, "Entered Invalid Email");
             }
-            return Regex.IsMatch(LName, Regex_LName);
+            return Regex.IsMatch(email, Regex_email);
         }
 
-        internal string validateLastN(string LName)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -9,9 +9,9 @@ namespace UserRegistration_ExceptionHandling
             Console.WriteLine("Welcome to User Registartion Problem Using Exception Handling");
             UserRegisterPattern UserRegisterPattern = new UserRegisterPattern();
 
-            Console.Write("Enter Last Name: ");
-            string LName = Console.ReadLine();
-            Console.WriteLine("The test result :: " + UserRegisterPattern.validateLastName(LName));
+            Console.Write("Enter the valid email: ");
+            string Email = Console.ReadLine();
+            Console.WriteLine("The test result :: " + UserRegisterPattern.validateEmail(Email));
 
         }
         
