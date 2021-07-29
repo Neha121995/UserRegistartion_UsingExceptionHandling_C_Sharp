@@ -8,16 +8,16 @@ namespace User_TestCase
         readonly Pattern pattern = new Pattern();
 
         [TestMethod]
-        public void ShouldReturnCustomUserExceptionForFirstName()
+        public void ShouldReturnCustomUserExceptionForLastName()
         {
             try
             {
                 bool expected = true;
-                Assert.AreEqual(expected, pattern.validateFirstName(null));
+                Assert.AreEqual(expected, pattern.validateLastName(null));
             }
             catch (RegisterUser e)
             {
-                Assert.AreEqual("Invalid FirstName", e.Message);
+                Assert.AreEqual("Invalid Last Name", e.Message);
             }
         }
     }
